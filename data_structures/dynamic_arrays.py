@@ -25,6 +25,11 @@ class DynamicArray:
         if self.size > 0 and self.size == self.capacity // 4:
             self._resize(self.capacity // 2)
 
+        # Why Shrink at One-Fourth?
+        # Shrinking at one-fourth instead of one-half avoids a situation called "thrashing."
+        # Thrashing happens when you constantly grow and shrink the array as elements are added and removed.
+        # By shrinking only when the size is much smaller, the dynamic array remains efficient.
+
     def __len__(self):
         return self.size
 
