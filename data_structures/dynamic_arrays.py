@@ -58,8 +58,8 @@ def test_dynamic_array():
     print("Dynamic Array Tests Passed!")
 
 
-
-test_dynamic_array()
+if __name__ == "__main__":
+    test_dynamic_array()
 
 
 
